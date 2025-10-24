@@ -1,0 +1,129 @@
+#header {
+    background-color: #2D99AE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 2px solid black;
+  }
+  
+  .logo-image {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+  
+  .function-bar {
+    display: flex;
+    gap: 25px;
+  }
+  
+  .function-bar-button a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .function-bar-button a:hover {
+    background-color: white;
+    color: #2D99AE;
+  }
+  #intro {
+    background-color: #BCFEFE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 100px;
+    gap: 40px;
+    flex-wrap: wrap;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+
+  }
+  
+  .intro-title {
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2D99AE;
+  }
+  
+  .intro-introduction {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  .intro-right img{
+    height: 200px;
+    width: auto;
+    border: 2px solid;
+    border-radius: 2em;
+  }
+  #social-media{
+    background-color: #D7F9FA;
+    padding: 15px 50px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+
+  }
+  .social-media-title{
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2D99AE;
+  }
+  .social-media-app a{
+    text-decoration: none;
+  }
+  .social-media-app {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  .facebook-holder,
+  .instagram-holder,
+  .tiktok-holder {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between logo and name */
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 1px 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .facebook-holder:hover,
+  .instagram-holder:hover,
+  .tiktok-holder:hover {
+    transform: scale(1.05);
+  }
+  
+  .facebook-holder img,
+  .instagram-holder img,
+  .tiktok-holder img {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+  }
+  
+  .facebook,
+  .instagram,
+  .tiktok {
+    color: #2D99AE;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  
