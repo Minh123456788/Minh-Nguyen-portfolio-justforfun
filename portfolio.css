@@ -1,137 +1,424 @@
+/* === GENERAL RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f9fefe;
+  color: #333;
+}
+
+/* === HEADER === */
 #header {
-    background-color: #2D99AE;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border: 2px solid black;
-  }
-  
-  .logo-image {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-  }
-  
-  .function-bar {
-    display: flex;
-    gap: 25px;
-  }
-  
-  .function-bar-button a {
-    text-decoration: none;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-  }
-  
-  .function-bar-button a:hover {
-    background-color: white;
-    color: #2D99AE;
-  }
-  #intro {
-    background-color: #BCFEFE;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 60px 100px;
-    gap: 40px;
-    flex-wrap: wrap;
-    border-bottom: 2px solid black;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
+  background-color: #2d99ae;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 2px solid black;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
+.logo-image {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+}
+
+.function-bar {
+  display: flex;
+  gap: 25px;
+}
+
+.function-bar-button a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.function-bar-button a:hover {
+  background-color: white;
+  color: #2d99ae;
+}
+
+/* === INTRO SECTION === */
+#intro {
+  background-color: #e0f9f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 100px;
+  gap: 60px;
+  flex-wrap: wrap;
+  border: 2px solid black;
+  border-top: none;
+}
+
+.intro-left {
+  flex: 1 1 300px;
+}
+
+.intro-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #2d99ae;
+}
+
+.intro-introduction {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.intro-right img {
+  height: 260px;
+  width: auto;
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* === SOCIAL MEDIA SECTION === */
+#social-media {
+  background-color: #d7f9fa;
+  padding: 60px 100px;
+  border: 2px solid black;
+  border-top: none;
+}
+
+.social-media-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #2d99ae;
+  text-align: center;
+}
+
+.social-media-app {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.social-media-app a {
+  flex: 1 1 250px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  color: inherit;
+}
+
+.social-media-app a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.social-media-app img {
+  height: 60px;
+  width: 60px;
+  border-radius: 12px;
+}
+
+.facebook,
+.instagram,
+.tiktok {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2d99ae;
+}
+
+/* === ACTIVITIES === */
+#activities {
+  background-color: #b7f7f7;
+  padding: 60px 100px;
+  border: 2px solid black;
+  border-top: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Section title */
+.activities-top {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #2d99ae;
+  text-align: center;
+}
+
+/* Layout for activity cards */
+.activities-bot {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+/* Each activity box */
+.activities-bot > div {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.activities-bot > div:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Title on top */
+.activity-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #2d99ae;
+  margin-bottom: 15px;
+}
+
+/* Image below title */
+.acvitity-imgs {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Description text below image */
+.activities-bot > div > div:last-child {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+#score {
+  background-color: #e0f9f9;
+  padding: 60px 100px;
+  border: 2px solid black;
+  border-top: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ✅ Title styling */
+.score-top {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #2d99ae;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ✅ Container for IELTS + SAT */
+.score-bot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* ✅ Each score card */
+.ielts, .sat {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 20px;
+  width: 250px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ielts:hover, .sat:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* ✅ Images */
+.score-img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* ✅ Optional text or score display (example: “Overall: 8.0”) */
+.ielts div, .sat div {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* ✅ Responsive layout */
+@media (max-width: 768px) {
+  #score {
+    padding: 40px 30px;
   }
-  
-  .intro-title {
-    font-size: 42px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #2D99AE;
+
+  .score-top {
+    font-size: 32px;
+    margin-bottom: 25px;
   }
-  
-  .intro-introduction {
-    font-size: 18px;
-    line-height: 1.6;
+
+  .score-bot {
+    gap: 30px;
   }
-  
-  .intro-right img{
-    height: 200px;
-    width: auto;
-    border: 2px solid;
-    border-radius: 2em;
+
+  .ielts, .sat {
+    width: 200px;
+    padding: 15px;
   }
-  #social-media{
-    background-color: #D7F9FA;
-    padding: 15px 50px;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-bottom: 2px solid black;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    flex-wrap: wrap;
+
+  .score-img {
+    max-width: 160px;
+  }
+}
+#preferences {
+  background-color: #b7f7f7;
+  padding: 60px 100px;
+  border: 2px solid black;
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.preferences-top {
+  font-size: 42px;
+  font-weight: 700;
+  color: #2d99ae;
+  text-align: center;
+}
+
+.preferences-bot {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+}
+
+.pref {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  gap: 20px;
+  transition: transform 0.25s ease;
+}
+
+.pref:hover {
+  transform: scale(1.02);
+}
+
+.preferences-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+#footer {
+  background-color: #2d99ae;
+  color: white;
+  text-align: center;
+  padding: 60px 20px 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.footer-name {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.footer-icons a img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.footer-icons a img:hover {
+  transform: scale(1.1);
+  background-color: #2d99ae;
+}
+
+.footer-line {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 20px auto;
+  width: 90%;
+}
+
+.footer-bottom {
+  font-size: 15px;
+  color: black;
+}
 
 
-  }
-  .social-media-title{
-    font-size: 42px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #2D99AE;
-  }
-  .social-media-app {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;          /* ✅ allows boxes to move to next line */
-    gap: 20px;                /* ✅ spacing between rows/columns */
-  }
-  
-  .social-media-app a {
-    flex: 1 1 200px;          /* ✅ shrink/grow properly */
-    text-align: center;
-    min-width: 150px;         /* ✅ prevent boxes from getting too small */
-    text-decoration: none;
-  }
-  
-  .facebook-holder,
-  .instagram-holder,
-  .tiktok-holder {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    gap: 10px; /* space between logo and name */
-    background-color: white;
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  #header {
+    flex-direction: column;
+    gap: 10px;
     padding: 10px 20px;
-    border-radius: 12px;
-    box-shadow: 1px 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
   }
-  
-  .facebook-holder:hover,
-  .instagram-holder:hover,
-  .tiktok-holder:hover {
-    transform: scale(1.05);
+
+  #intro, #social-media, #activities {
+    padding: 40px 20px;
   }
-  
-  .facebook-holder img,
-  .instagram-holder img,
-  .tiktok-holder img {
-    height: 50px;
-    width: 50px;
-    border-radius: 10px;
+
+  .intro-right img {
+    height: 180px;
   }
-  
-  .facebook,
-  .instagram,
-  .tiktok {
-    color: #2D99AE;
-    font-weight: 600;
-    font-size: 18px;
+
+  .social-media-app {
+    flex-direction: column;
   }
-  
+}
+html {
+  scroll-behavior: smooth;
+}
